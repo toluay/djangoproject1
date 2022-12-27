@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  web:
+    build:
+      context: .
+      args:
+        SECRET_KEY: ${SECRET_KEY}
+    env_file: .env
+    volumes:
+      - ./:/opt/webapp
+    ports:
+      - "8000:${PORT}"
+    depends_on:
+      - postgres
+      - redis
+  postgres:
+    image: postgres:12
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ./postgres-data/postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  redis:
+    image: redis:5
+    ports:
+      - "6379:6379"

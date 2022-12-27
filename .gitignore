@@ -1,0 +1,7 @@
+*.pyc
+
+.terraform
+
+staticfiles/
+postgres-data/
+.idea/
