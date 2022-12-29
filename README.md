@@ -1,4 +1,4 @@
-# hiring_example_25770
+# example_25770
 
 This is a repository for a web application 
 
