@@ -26,7 +26,7 @@ This project is set up to run using [Docker Compose](https://docs.docker.com/com
 1. Install Docker:
    - Linux - [get.docker.com](https://get.docker.com/)
    - Windows or MacOS - [Docker Desktop](https://www.docker.com/products/docker-desktop)
-1. Clone this repo and `cd hiring_example_25770`
+1. Clone this repo and `cd example_25770`
 1. Make sure `Pipfile.lock` exists. If it doesn't, generate it with:
    ```sh
    $ docker run -it --rm -v "$PWD":/django -w /django python:3.7 pip3 install --no-cache-dir -q pipenv && pipenv lock
